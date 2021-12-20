@@ -1,12 +1,25 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <nav-bar />
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> -->
     </div>
     <router-view/>
+    <movie-footer />
   </div>
 </template>
+
+<script>
+import NavBar from './components/NavBar.vue'
+import MovieFooter from './components/MovieFooter.vue'
+export default {
+  components: {
+    NavBar,
+    MovieFooter
+  }
+}
+</script>
 
 <style>
 #app {
